@@ -6,7 +6,8 @@ import uuid
 
 blob_container = app.config['BLOB_CONTAINER']
 storage_url = "https://{}.blob.core.windows.net/".format(app.config['BLOB_ACCOUNT'])
-blob_service = BlobServiceClient(account_url=storage_url, credential=app.config['BLOB_STORAGE_KEY'])
+blob_service = BlobServiceClient(account_url=storage_url,
+                                 credential=app.config['BLOB_STORAGE_KEY'])
 
 
 class Animal(db.Model):
